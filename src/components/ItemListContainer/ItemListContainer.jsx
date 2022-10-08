@@ -1,16 +1,25 @@
 import React from 'react'
 import Card from '../Card/Card';
-import getSongs from '../MockAPI/MockAPI';
+import { getSongs, getArtist } from '../MockAPI/MockAPI';
+import { useParams } from 'react-router-dom';
 
 export default function ItemListContainer() {
 
   const [songs, setSongs] = React.useState([]);
+  const params = useParams().categoryId;
 
   React.useEffect(() => {
-    getSongs().then((data) => {
-      setSongs(data)
-    }).catch("Error retireving the data!");
-  });
+    if(params === undefined){
+      getSongs().then((data) => {
+        setSongs(data);
+      }).catch("Error retrieving data!");
+    }
+    else{
+      getArtist(params).then((data) => {
+        setSongs(data);
+      }).catch('Error retrieving data!');
+    }
+  }, [params]);
 
   return(
     <div className="container">
@@ -18,6 +27,7 @@ export default function ItemListContainer() {
         {songs.map((song) => {
           return(
             <Card
+              key={song.id}
               id={song.id}
               artist={song.artist}
               album={song.album}

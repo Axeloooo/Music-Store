@@ -118,10 +118,32 @@ const data = [
     }
 ]
 
-export default function getSongs() {
+export function getSongs() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(data);
         }, 1500);
     });
+}
+
+export function getSong(params) {
+    return new Promise((resolve) => {
+        let songRequired = data.find((item) => {
+            return item.id === parseInt(params);
+        })
+        setTimeout(() => {
+            resolve(songRequired);
+        }, 1500);
+    })
+}
+
+export function getArtist(params) {
+    return new Promise((resolve) => {
+        let artistRequired = data.filter((item) => {
+            return item.artist === params;
+        })
+        setTimeout(() => {
+            resolve(artistRequired);
+        }, 1500);
+    })
 }
