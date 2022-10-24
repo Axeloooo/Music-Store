@@ -1,7 +1,9 @@
+// <----- Imports ----->
 import React from 'react'
 import './Navbar.css'
 import logo from '../Media/logo.png'
 import { Link } from 'react-router-dom';
+// <------------------->
 
 export default function Navbar() {
   return(

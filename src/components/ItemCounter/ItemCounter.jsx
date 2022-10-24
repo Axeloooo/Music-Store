@@ -1,8 +1,9 @@
+// <----- Imports ----->
 import React from 'react';
+// <------------------->
 
 export default function ItemCounter(props) {
-
-  const [counter, setCounter] = React.useState(props.initial);
+  const [counter, setCounter] = React.useState(1);
 
   function handleAdd(){
     if(counter < (props.stock)){

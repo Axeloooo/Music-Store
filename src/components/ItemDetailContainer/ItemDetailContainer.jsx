@@ -1,7 +1,9 @@
+// <----- Imports ----->
 import React from 'react';
-import { getSong } from '../MockAPI/MockAPI';
 import { useParams } from 'react-router-dom';
 import CardDetails from '../CardDetails/CardDetails';
+import { getSong } from '../../services/firebase';
+// <------------------->
 
 export default function ItemDetailContainer() {
 
@@ -17,20 +19,7 @@ export default function ItemDetailContainer() {
   return(
     <div className="container">
       <div className="d-flex flex-column justify-content-around align-items-center gap-4 py-4 flex-md-row flex-md-wrap align-items-md-stretch">
-        <CardDetails
-          key={song.id}
-          id={song.id}
-          artist={song.artist}
-          album={song.album}
-          title={song.title}
-          length={song.length}
-          year={song.year}
-          genre={song.genre}
-          stock={song.stock}
-          initial={song.initial}
-          price={song.price}
-          image={song.image}
-        ></CardDetails>
+        <CardDetails song={song}></CardDetails>
       </div>
     </div>
   );
