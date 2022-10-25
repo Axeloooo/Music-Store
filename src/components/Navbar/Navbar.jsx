@@ -1,6 +1,6 @@
 // <----- Imports ----->
 import React from 'react'
-import './Navbar.css'
+import './Navbar.scss'
 import logo from '../Media/logo.png'
 import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
@@ -43,9 +43,11 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navmenu">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <button className="btn btn-lg">
-                <CartWidget></CartWidget>
-              </button>
+              <Link to={'/Cart'}>
+                <button className="btn btn-lg">
+                  <CartWidget></CartWidget>
+                </button>
+              </Link>
             </li>
           </ul>
         </div>

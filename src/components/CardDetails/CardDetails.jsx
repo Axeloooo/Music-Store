@@ -1,6 +1,6 @@
 // <----- Imports ----->
 import React from 'react';
-import './CardDetails.css';
+import './CardDetails.scss';
 import ItemCounter from '../ItemCounter/ItemCounter';
 import Loader from '../Loader/Loader';
 import { cartContext } from '../../context/cartContext';
@@ -25,6 +25,7 @@ export default function CardDetails({ song }) {
             <img id="cardDetailImage" src={song.image} alt="Album cover"></img>
             <div className="d-flex flex-column">
               <h1>{song.title}</h1>
+              {song.feature === "" ? <div></div> : <p>feat. {song.feature}</p>}
               <p>Artist: {song.artist}</p>
               <p>Genre: {song.genre}</p>
               <p>Year: {song.year}</p>

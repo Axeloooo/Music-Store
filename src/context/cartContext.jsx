@@ -28,13 +28,21 @@ function CartContextProvider(props) {
     setCart(newCart);
   }
 
-  // function getTotalPrice()
+  function getTotalPrice(){
+    let total = 0;
+    cart.forEach((itemInCart) => {
+      total += (itemInCart.count * itemInCart.price);
+    });
+    return total;
+  }
 
-  // function clearCart()
+  function clearCart(){
+    setCart([]);
+  }
   
   return (
     <>
-      <cartContext.Provider value={{ cart, addToCart, getTotalItemCount, removeItem }}>
+      <cartContext.Provider value={{ cart, addToCart, getTotalItemCount, removeItem, getTotalPrice, clearCart }}>
         {props.children}
       </cartContext.Provider>
     </>
