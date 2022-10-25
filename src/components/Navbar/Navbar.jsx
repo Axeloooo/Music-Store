@@ -3,6 +3,7 @@ import React from 'react'
 import './Navbar.css'
 import logo from '../Media/logo.png'
 import { Link } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
 // <------------------->
 
 export default function Navbar() {
@@ -27,14 +28,14 @@ export default function Navbar() {
                 Albums
               </Link>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Category
               </a>
-              <ul class="dropdown-menu dropdown-menu-light">
-                <li><Link to={'/Category/Drake'} class="dropdown-item">Drake</Link></li>
-                <li><Link to={'/Category/The Weeknd'} class="dropdown-item">The Weeknd</Link></li>
-                <li><Link to={'/Category/Bad Bunny'} class="dropdown-item">Bad Bunny</Link></li>
+              <ul className="dropdown-menu dropdown-menu-light">
+                <li><Link to={'/Category/Drake'} className="dropdown-item">Drake</Link></li>
+                <li><Link to={'/Category/The Weeknd'} className="dropdown-item">The Weeknd</Link></li>
+                <li><Link to={'/Category/Bad Bunny'} className="dropdown-item">Bad Bunny</Link></li>
               </ul>
             </li>
           </ul>
@@ -43,7 +44,7 @@ export default function Navbar() {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <button className="btn btn-lg">
-                <i className="bi bi-cart"></i>
+                <CartWidget></CartWidget>
               </button>
             </li>
           </ul>

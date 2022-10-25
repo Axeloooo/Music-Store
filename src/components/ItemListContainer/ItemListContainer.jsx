@@ -32,7 +32,7 @@ export default function ItemListContainer() {
         <div className="d-flex flex-column justify-content-around align-items-center gap-4 py-4 flex-md-row flex-md-wrap align-items-md-stretch">
           {songs.map((song) => {
             return(
-              <Card song={song}></Card>
+              <Card key={song.id} song={song}></Card>
             );
           })}
         </div>

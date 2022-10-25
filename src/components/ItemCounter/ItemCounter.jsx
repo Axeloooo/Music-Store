@@ -3,7 +3,7 @@ import React from 'react';
 // <------------------->
 
 export default function ItemCounter(props) {
-  const [counter, setCounter] = React.useState(1);
+  const [counter, setCounter] = React.useState(props.initial);
 
   function handleAdd(){
     if(counter < (props.stock)){
@@ -23,6 +23,12 @@ export default function ItemCounter(props) {
         <button onClick={handleSub} className='btn'> - </button>
         <p>{counter}</p>
         <button onClick={handleAdd} className='btn'> + </button>
+      </div>
+      <div className="d-flex align-items-center justify-content-center text-center">
+        <button className="btn" onClick={() => {props.onAddToCart(counter)}}>Add</button>
+      </div>
+      <div className="d-flex align-items-center justify-content-center text-center">
+        <button className="btn" onClick={() => {props.onDeleteFromCart(props.id)}}>Delete</button>
       </div>
     </div>
   );

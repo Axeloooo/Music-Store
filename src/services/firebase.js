@@ -53,9 +53,9 @@ export async function getSong(params){
 export async function getArtist(params){
     try{
         const artistRef = collection(db, 'songs');
-        const q = await getDocs(query(artistRef, where("artist", "==", params)));
-        if(q){
-            const artistData = q.docs.map((doc) => {
+        const queryRequest = await getDocs(query(artistRef, where("artist", "==", params)));
+        if(queryRequest){
+            const artistData = queryRequest.docs.map((doc) => {
                 return( {id: doc.id, ...doc.data()} );
             })
             return artistData;

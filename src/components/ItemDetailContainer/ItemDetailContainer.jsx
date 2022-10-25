@@ -19,7 +19,7 @@ export default function ItemDetailContainer() {
   return(
     <div className="container">
       <div className="d-flex flex-column justify-content-around align-items-center gap-4 py-4 flex-md-row flex-md-wrap align-items-md-stretch">
-        <CardDetails song={song}></CardDetails>
+        <CardDetails key={song.id} song={song}></CardDetails>
       </div>
     </div>
   );

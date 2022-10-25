@@ -3,9 +3,20 @@ import React from 'react';
 import './CardDetails.css';
 import ItemCounter from '../ItemCounter/ItemCounter';
 import Loader from '../Loader/Loader';
+import { cartContext } from '../../context/cartContext';
 // <------------------->
 
 export default function CardDetails({ song }) {
+  const {addToCart, removeItem} = React.useContext(cartContext);
+
+  function handleAddToCart(counter){
+    addToCart(song, counter);
+  }
+
+  function handleRemoveFromCart(idToRemove){
+    removeItem(idToRemove);
+  }
+
   if(song.title){
     return(
       <div className="border-bottom border-end border-3 rounded-3 py-4" id="cardDetailStyle">
@@ -22,7 +33,7 @@ export default function CardDetails({ song }) {
               <h3>Price: ${song.price}</h3>
             </div>
             <div className="d-flex">
-              <ItemCounter initial={song.initial} stock={song.stock}></ItemCounter>
+              <ItemCounter onDeleteFromCart={handleRemoveFromCart} onAddToCart={handleAddToCart} initial={song.initial} stock={song.stock} id={song.id}></ItemCounter>
             </div>
           </div>
         </div>
