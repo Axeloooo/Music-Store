@@ -37,10 +37,6 @@ function App() {
               path='/Cart' element={<Cart></Cart>}
             ></Route>
 
-            <Route
-              path='/thankyou/:orderCheckoutId' element={<CartDetailCheckout></CartDetailCheckout>}
-            ></Route>
-
           </Routes>
 
         </BrowserRouter>

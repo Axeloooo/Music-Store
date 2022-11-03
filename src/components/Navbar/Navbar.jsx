@@ -23,11 +23,6 @@ export default function Navbar() {
                 Store
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to={'/Albums'} className="nav-link">
-                Albums
-              </Link>
-            </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Category
