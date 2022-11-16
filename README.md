@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# MUSIC STORE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Music Store provides the newer top albums from artists such as Bad Bunny, Drake and The Weeknd. It gives the user the chance to buy and order their favorite songs among the available catalog.
 
-## Available Scripts
+## Socials
 
-In the project directory, you can run:
+- GitHub: [Axeloooo](https://github.com/Axeloooo)
+- LinkedIn: [Axel Sanchez](https://www.linkedin.com/in/axel-s%C3%A1nchez-a1089b23a/)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Built using create-react-app, the music store has it's bases in JSX and vanilla JavaScript, a buying checkout system with a user data base in Firebase as well as the songs catalog.
+The context is used through all the project which allows the user to have access to the cart at any moment.
+Bootstrap framework and SCSS preprocessor were used in the presentation process of the website.
+Git version control was used through the hole development process of the website.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Built With
 
-### `npm test`
+This project was built using the following technologies: React JS, Firebase, JavaScript, HTML, SCSS, CSS, Bootstrap and Git.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ReactJS] - free and open-source front-end JavaScript library for building user interfaces based on UI components!
+- [Firebase] - set of hosting services for any type of application.
+- [JavaScript] - programming language that is one of the core technologies of the World Wide Web!
+- [HTML] - standard markup language for documents designed to be displayed in a web browser.
+- [SCSS] - preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets.
+- [CSS] - style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.
+- [Bootstrap] - free and open-source CSS framework directed at responsive, mobile-first front-end web development.
+- [node.js] - open-source server environment.
+- [Git] - free and open source software for distributed version control.
 
-### `npm run build`
+## Installation and initializing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Music Store requires [Node.js](https://nodejs.org/) v10+ and [Git](https://git-scm.com/) Version Control to run.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open your favorite Terminal and run these commands.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the repository with the git command:
 
-### `npm run eject`
+```sh
+git clone https://github.com/Axeloooo/Music-Store.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To run the Music Store Project:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```sh
+npm start
+```
